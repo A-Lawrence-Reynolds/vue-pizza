@@ -65,6 +65,7 @@ h1 {
 }
 .header_logo img {
   max-width: 25vw;
+  
 }
 ul {
   padding: 10px 0;
