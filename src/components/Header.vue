@@ -65,17 +65,16 @@ h1 {
 }
 .header_logo img {
   max-width: 25vw;
-  
 }
 ul {
   padding: 10px 0;
 }
 li {
-    display:inline-block;
+  display: inline-block;
 }
 @media screen and (min-width: 900px) {
   .header_logo img {
-  max-width: 25%;
-}
+    max-width: 25%;
+  }
 }
 </style>
