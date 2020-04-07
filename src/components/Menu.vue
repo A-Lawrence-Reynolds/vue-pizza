@@ -10,7 +10,7 @@
         :key="item.name"
       >
         <tbody>
-            <!-- name and description -->
+          <!-- name and description -->
           <tr>
             <td>
               <strong>
@@ -26,11 +26,15 @@
             </td>
           </tr>
           <!-- price and size  -->
-          <tr v-for="(option , index) in item.options" :key="index">
+          <tr
+            v-for="(option , index) in item.options"
+            :key="index"
+          >
             <td>{{option.size}}"</td>
             <td>${{option.price}}</td>
             <td>
               <button
+                @click="addToBasket(item, option)"
                 type="button"
                 class='btn_green'
               >+</button>
@@ -40,6 +44,37 @@
         </tbody>
       </table>
     </div>
+    <!-- shopping basket  -->
+    <div class='basket'>
+      <h3>
+        Basket
+      </h3>
+      <table>
+
+        <tbody>
+
+          <tr>
+
+            <td>
+              <button class="btn_green">&#8722;</button>
+              <span>2</span>
+              <button class="btn_green">&#43;</button>
+
+            </td>
+
+            <td>Pepperoni 9"</td>
+            <td>$4.45</td>
+          </tr>
+
+          <p>Order total:</p>
+          <button class="btn_green">Place Order</button>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
   </div>
 </template>
 
@@ -47,6 +82,7 @@
 export default {
   data() {
     return {
+      basket: [],
       getMenuItems: {
         1: {
           name: "Margherita",
@@ -94,6 +130,23 @@ export default {
         }
       }
     };
+  },
+  methods: {
+    async addToBasket(item, option) {
+      const pizzaExists = await this.basket.find(
+        pizza => pizza.name === item.name && pizza.size === option.size
+      );
+      if (pizzaExists) {
+        pizzaExists.quantity++;
+        return;
+      }
+      this.basket.push({
+        name: item.name,
+        price: item.price,
+        size: option.size,
+        quantity: 1
+      });
+    }
   }
 };
 </script>
@@ -109,7 +162,7 @@ h3 {
   display: flex;
   flex-direction: column;
 }
-.menu {
+.menu, .basket {
   background: #f1e6da;
   border-radius: 3px;
   height: 100vh;
@@ -124,5 +177,10 @@ h3 {
   .menu {
     width: 65vw;
   }
+  .basket{ 
+      width:35vw;
+
+  }
 }
+
 </style>
