@@ -54,8 +54,8 @@ h1 {
     #d85226 25%,
     #f79e38 25% 50%,
     #d85226 50% 75%,
-    #d85226 75%,
-    #d85226 100%
+    #f79e38 75%,
+    #f79e38 100%
   );
   background-size: 80px 80px;
   display: flex;
@@ -70,11 +70,11 @@ ul {
   padding: 10px 0;
 }
 li {
-  display: inline-block;
+    display:inline-block;
 }
 @media screen and (min-width: 900px) {
   .header_logo img {
-    max-width: 25%;
-  }
+  max-width: 25;
+}
 }
 </style>
