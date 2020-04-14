@@ -191,6 +191,10 @@ h3 {
   display: flex;
   flex-direction: column;
 }
+.btn_green{background-color: rgb(63, 145, 63);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px; }
 .menu,
 .basket {
   background: #f1e6da;
@@ -211,4 +215,6 @@ h3 {
     width: 35vw;
   }
 }
+
+
 </style>
