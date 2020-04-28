@@ -12,27 +12,38 @@
     </div>
     <nav>
       <ul>
-        <il>
-          <a href='/'>HOME</a>
-        </il>
+
+        <router-link
+          :to='homeLink'
+          tag="li"
+        ><a>Home</a></router-link>
+
         <span>
           ~
         </span>
-        <il>
-          <a href='/menu'>MENU</a>
-        </il>
+
+        <router-link
+          :to='menuLink'
+          tag="li"
+        ><a>Menu</a></router-link>
+
         <span>
           ~
         </span>
-        <il>
-          <a href='/contact'>CONTACT</a>
-        </il>
+
+        <router-link
+          :to='contactLink'
+          tag='li'
+        ><a>Contact</a></router-link>
+
         <span>
           ~
         </span>
-        <il>
-          <a href='/about'>ABOUT US</a>
-        </il>
+
+        <router-link
+          :to='aboutLink'
+          tag='li'
+        ><a>About</a></router-link>
 
       </ul>
     </nav>
@@ -40,7 +51,15 @@
 </template>
 <script>
 export default {
-  name: "appHeader"
+  name: "appHeader",
+  data() {
+    return{
+      homeLink: '/',
+      menuLink: '/menu',
+      contactLink: '/contact',
+      aboutLink: '/about'
+    }
+  }
 };
 </script>
 <style scoped>
@@ -70,11 +89,11 @@ ul {
   padding: 10px 0;
 }
 li {
-    display:inline-block;
+  display: inline-block;
 }
 @media screen and (min-width: 900px) {
   .header_logo img {
-  max-width: 25;
-}
+    max-width: 25;
+  }
 }
 </style>

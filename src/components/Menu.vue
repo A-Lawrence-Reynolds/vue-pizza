@@ -1,6 +1,7 @@
 <template>
   <div class="menu_wrapper">
     <!--menu -->
+    {{$route.params.items}}
     <div class="menu">
       <h3>
         ◊ Authentic handmade pizza ◊
