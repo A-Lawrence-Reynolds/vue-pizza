@@ -3,7 +3,7 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import Contact from './components/Contact'
 import About from './components/About'
-// import History from '.components/History'
+import History from './components/History'
 import Delivery from './components/Delivery'
 import OrderingGuide from './components/OrderingGuide'
 import Home from './components/Home'
@@ -18,8 +18,9 @@ const routes = [
   {path: '/menu', component: Menu},
   {path: '/contact', component: Contact},
   {path: '/admin', component: Admin},
-   {path: '/history', component: History},
+   
   {path: '/about', component: About, children: [
+    {path: '/history', component: History},
     {path: '/delivery', component: Delivery},
     {path: '/ordering-guide', component: OrderingGuide},
   ]},

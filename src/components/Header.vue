@@ -64,7 +64,8 @@ export default {
 </script>
 <style scoped>
 h1 {
-  font-size: 1.3em;
+  font-size: 1.7em;
+  font-family: 'Fredoka One', cursive;
 }
 
 .header_logo {
@@ -85,11 +86,20 @@ h1 {
 .header_logo img {
   max-width: 25vw;
 }
+nav{
+  display:flex;
+  justify-content: center;
+  
+  }
 ul {
   padding: 10px 0;
+  width:50vw;
+  margin: auto ;
+  
 }
 li {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
 }
 @media screen and (min-width: 900px) {
   .header_logo img {

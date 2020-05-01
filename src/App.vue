@@ -16,4 +16,10 @@ export default {
   }
 }
 </script>
-
+<style>
+body{
+ font-family: 'Bree Serif', serif;
+  margin:0;
+  font-size: 1.5;
+}
+</style>
