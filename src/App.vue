@@ -22,4 +22,20 @@ body{
   margin:0;
   font-size: 1.5;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 10px 0px;
+  background-color: #f1e6da;
+}
+li{
+  list-style: none;
+}
 </style>

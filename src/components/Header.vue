@@ -14,7 +14,7 @@
       <ul>
 
         <router-link
-          :to='homeLink'
+          :to="{name: 'homeLink'}"
           tag="li"
         ><a>Home</a></router-link>
 
@@ -23,7 +23,7 @@
         </span>
 
         <router-link
-          :to='menuLink'
+          :to="{name: 'menuLink'}"
           tag="li"
         ><a>Menu</a></router-link>
 
@@ -32,7 +32,7 @@
         </span>
 
         <router-link
-          :to='contactLink'
+          :to="{name: 'contactLink'}"
           tag='li'
         ><a>Contact</a></router-link>
 
@@ -41,7 +41,7 @@
         </span>
 
         <router-link
-          :to='aboutLink'
+          :to="{name: 'aboutLink'}"
           tag='li'
         ><a>About</a></router-link>
 
@@ -52,14 +52,7 @@
 <script>
 export default {
   name: "appHeader",
-  data() {
-    return{
-      homeLink: '/',
-      menuLink: '/menu',
-      contactLink: '/contact',
-      aboutLink: '/about'
-    }
-  }
+  
 };
 </script>
 <style scoped>

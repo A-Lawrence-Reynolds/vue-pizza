@@ -4,21 +4,25 @@
     <nav>
       <ul> 
           <router-link
-          to='/history'
+          :to="{name: 'historyLink'}"
           tag='li'
         >
           <a class="nav-link">history</a>
         </router-link>
+        <span>~</span>
         <router-link
-          to='/ordering-guide'
+          :to="{name: 'orderingLink'}"
           tag='li'
         >
           <a class="nav-link">ordering guide</a>
         </router-link>
+        <span>~</span>
+
         <router-link
-          to='/delivery'
+          :to="{name: 'deliveryLink'}"
           tag='li'
         >
+
           <a class="nav-link">delivery</a>
         </router-link>
       </ul>
@@ -34,5 +38,6 @@ export default {
 <style scoped>
 h3{
     text-align: center;
+    padding: 10px 0px;
 }
 </style>
