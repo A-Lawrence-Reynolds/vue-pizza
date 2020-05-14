@@ -6,7 +6,7 @@
       </h2>
       <img src="../assets/roller.png" alt="rolling pin" />
       <h3>Feeling hungry?</h3>
-      <button class="order_btn">Let's order!</button>
+      <button class="order_btn" @click="goToMenu">Let's order!</button>
     </div>
   </div>
 </template>
@@ -14,6 +14,11 @@
 <script>
 export default {
   name: "home",
+  methods:{
+    goToMenu() {
+      this.$router.push({ name:"menuLink"})
+    }
+  }
 };
 </script>
 <!--scripts end here -->

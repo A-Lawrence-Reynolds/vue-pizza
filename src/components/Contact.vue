@@ -8,9 +8,9 @@
       <br> Phone
     </address>
     <address>
-        <strong> Email:</strong>
+        <strong>Email:</strong>
         <br>
-        <p> pizzaPlanet@pizza.com</p>
+        <p>pizzaPlanet@pizza.com</p>
     </address>
 
   </div>
