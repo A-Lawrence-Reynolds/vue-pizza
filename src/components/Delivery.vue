@@ -5,6 +5,7 @@
             <p>Paragraph in delivery </p>
             <img src="../assets/delivery.png" alt="delivery image">
         </div>
+        <p>be sure to leave a like on yelp! </p>
 
 
     </div>
