@@ -89,6 +89,8 @@ export default {
     NewPizza,
     Login
   },
+
+  
   methods: {
     async signOut() {
       try {
