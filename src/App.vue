@@ -2,7 +2,11 @@
   <div id="app">
   <app-header/>
   <router-view></router-view>
-
+<div class="info-block-warapper">
+  <router-view name="ordering-guide"></router-view>
+  <router-view name="delivery"></router-view>
+  <router-view name="history"></router-view>
+</div>
   </div>
 </template>
 
