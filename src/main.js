@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import {routes} from './routers.js'
+import {store} from './store/store'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
@@ -23,5 +24,6 @@ scrollBehavior(to){
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')
