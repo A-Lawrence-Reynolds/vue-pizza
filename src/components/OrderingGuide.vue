@@ -1,6 +1,13 @@
 <template>
-    <div>
-       <h1>hello from order guide</h1> 
+    <div class="info_block">
+        <h3>How to order</h3>
+        <div class="info_block_content">
+            <p>lorum ipsum  </p>
+          <img src="../assets/order.png" alt="order image">  
+        </div>
+
+        
+       
     </div>
 </template>
 <script>

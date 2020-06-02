@@ -9,7 +9,12 @@ import Admin from './components/Admin'
 
 
 export const routes = [
-    {path: '/', name:'homeLink', component: Home },
+    {path: '/', name:'homeLink', components: {
+        default: Home,
+        "ordering-guid": OrderingGuide,
+        'delivery': Delivery,
+        'history': History
+    } },
     {path: '/menu',name:'menuLink', component: Menu},
     {path: '/contact',name:'contactLink', component: Contact},
     {path: '/admin',
