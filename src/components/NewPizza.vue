@@ -69,7 +69,7 @@
       class='btn_green'
       @click='add'
     >Add</button>
-    {{this.newPizza}}
+    
   </form>
 </template>
 

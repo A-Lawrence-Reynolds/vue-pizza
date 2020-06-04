@@ -18,15 +18,16 @@
             <th>Remove Item</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody v-for="item in getMenuItems" :key="item.id">
           <tr>
             <td>
               pizza
+              {{item.name}}
             </td>
             <td>
               <button
                 type='button'
-                class='btn_green'
+                class='btn_red'
               >
                 &times;
               </button>
@@ -89,7 +90,11 @@ export default {
     NewPizza,
     Login
   },
-
+computed:{
+  getMenuItems() {
+    return this.$store.state.menuItems
+  }
+},
   
   methods: {
     async signOut() {
